@@ -1,0 +1,94 @@
+.home-container{
+    padding:20px;
+    margin:auto;
+    background: linear-gradient(45deg,#4897cc,#ffffff);
+    max-width: 700px;
+    margin:40px auto;
+    border-radius: 12px;
+}
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#4682A9;
+    font-weight: bold;
+}
+.expenses-form{
+    display: grid;
+    gap:10px;
+}
+.expenses-form input{
+    padding:10px;
+    border:1px solid #ccc;
+}
+.expenses-form button{
+    background-color: #3687d8;
+    padding: 10px;
+    color:white;
+    cursor: pointer;
+    border: none;;
+}
+
+.expenses-form button:hover{
+    background-color: #4682A9;
+}
+.expenses-items{
+    background-color: white;  
+}
+
+.expenses-items h2{
+    padding:20px;
+}
+.expenses-items ul{
+    list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+ 
+}
+.sort{
+    height: 30px;
+    width:30px;
+    
+    
+}
+.head-section{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 0;
+}
+.sort-item{
+   display: flex;
+   align-items: center;
+   gap:10px;
+   padding:10px;
+    
+}
+.price-sort{
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.filter-section{
+    background-color: #ffffff;
+    padding:15px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+     
+}
+.filter-section button{
+    margin-bottom: 20px;
+    padding:8px;
+    
+    
+}
+
+
+.filter-section input{
+    padding:5px;
+}
+
+
+

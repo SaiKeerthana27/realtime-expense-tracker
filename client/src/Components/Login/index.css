@@ -1,0 +1,50 @@
+.login-container{
+    height: 100vh;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top,#4682A9,#ffffff);
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+    padding:45px;
+    box-shadow: 5px 8px 20px #4681a9dc ;
+    animation : fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn{
+    from {
+        transform : translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+.login-form input{
+    padding: 7px;
+}
+.login-form button{
+    padding: 10px;
+    background-color: #749BC2;
+    border:none;
+    color:white;
+    cursor: pointer;
+}
+.login-form button:hover{
+    background-color: #4682A9;
+}
+.login-form a{
+    text-decoration: none;
+    color: #4682A9;
+}
+.login-form a:hover{
+    text-decoration: underline;
+    
+}

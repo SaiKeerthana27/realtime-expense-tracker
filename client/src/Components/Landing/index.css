@@ -1,0 +1,32 @@
+.landing-container{
+    height: 100vh;
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.landing-container h1{
+    font-size: 60px;
+    color:#456882;
+}
+.landing-container p{
+    font-size: 25px;
+    
+}
+.landing-buttons{
+    display: flex;
+    justify-content: center;
+    gap:18px;
+    padding:10px;
+}
+.landing-buttons button{
+   font-size: 20px;
+   background-color: #749BC2;
+   border:none;
+   border-radius: 6px;
+   padding: 10px;
+   color:white;
+   cursor: pointer;
+}
+.landing-buttons button:hover{
+    background-color: #4682A9;
+}
