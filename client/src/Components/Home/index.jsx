@@ -78,7 +78,7 @@ function Home(){
         e.preventDefault();
         if (!form.amount || !form.category) return ;
         try{
-            const res = await axios.post(backendUrl+"/api/expense/add",
+            const res = await axios.post(backendUrl+ "/api/expense/add",
                 {...form, userId},
                 {
                     headers:{
