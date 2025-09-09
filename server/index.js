@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGO_URL,{
 .then(() => console.log("Mongoose connected"))
 .catch((err) => console.error("Mongo error",err));
 
+app.get("/", (req,res)=>{
+    res.send("API Working")
+})
+
 app.use("/api/auth", authRoutes);
 app.use("/api/expense",expenseRoutes);
 
