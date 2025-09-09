@@ -3,6 +3,7 @@ import './index.css';
 import { useState } from 'react';
 import axios from 'axios';
 function Signup(){
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -11,7 +12,7 @@ function Signup(){
     const handleSignup = async (e) =>{
         e.preventDefault();
         try{
-            await axios.post("http://localhost:5000/api/auth/signup", {
+            await axios.post(backendUrl + "api/auth/signup", {
                 name,
                 email,
                 password,

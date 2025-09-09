@@ -3,13 +3,14 @@ import './index.css';
 import { useState } from 'react';
 import axios from 'axios';
 function Login(){
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const navigate = useNavigate();
     const handleLogin = async (e) =>{
         e.preventDefault();
         try{
-            const res = await axios.post("http://localhost:5000/api/auth/login",{
+            const res = await axios.post(backendUrl + "/api/auth/login",{
                 email,
                 password,
             });

@@ -4,6 +4,7 @@ import axios from 'axios';
 import "./index.css";
 import { useNavigate } from "react-router-dom";
 function Home(){
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [expenses, setExpenses] = useState([]);
     const [form, SetForm] = useState({
         amount:"",
@@ -27,7 +28,7 @@ function Home(){
 
     const fetchAll = async (e) =>{
         try{
-            const res = await axios.get(`http://localhost:5000/api/expense/getUserExpense/${userId}`,
+            const res = await axios.get( `${backendUrl}/api/expense/getUserExpense/${userId}`,
                 {headers: {Authorization: `Bearer ${token}`}}
             );
             setExpenses(res.data)
@@ -40,7 +41,7 @@ function Home(){
     //filterByMonth
     const fetchByDate = async(e) =>{
         try{
-            const res = await axios.get("http://localhost:5000/api/expense/by-date",
+            const res = await axios.get(backendUrl+ "/api/expense/by-date",
                 {
                     params:{userId, date:filterDate},
                     headers:{Authorization: `Bearer ${token}`},
@@ -55,7 +56,7 @@ function Home(){
     //filterByMonth
     const fetchByMonth = async(e) =>{
         try{
-            const res = await axios.get("http://localhost:5000/api/expense/by-month",
+            const res = await axios.get(backendUrl+ "api/expense/by-month",
                 {
                     params:{userId, month:filterMonth},
                     headers:{Authorization: `Bearer ${token}`},
@@ -77,7 +78,7 @@ function Home(){
         e.preventDefault();
         if (!form.amount || !form.category) return ;
         try{
-            const res = await axios.post("http://localhost:5000/api/expense/add",
+            const res = await axios.post(backendUrl+"/api/expense/add",
                 {...form, userId},
                 {
                     headers:{
