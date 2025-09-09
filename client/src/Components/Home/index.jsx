@@ -56,7 +56,7 @@ function Home(){
     //filterByMonth
     const fetchByMonth = async(e) =>{
         try{
-            const res = await axios.get(backendUrl+ "api/expense/by-month",
+            const res = await axios.get(backendUrl+ "/api/expense/by-month",
                 {
                     params:{userId, month:filterMonth},
                     headers:{Authorization: `Bearer ${token}`},
